@@ -211,49 +211,6 @@
 			]
 		}
 		{
-			icon: "create:flywheel"
-			x: 4.0d
-			y: 5.0d
-			subtitle: "Held in High Esteem"
-			description: [
-				"The ultimate in compact power generation. The Furnace engine is a three-part multi-block structure that provides the highest possible SU generation. "
-				""
-				"In order to run, the Furnace or Blast Furnace must be activated (lit). This would normally require it to be smelting something, though there are other ways to achieve this state."
-				""
-				"To build it, place the Furnace Engine on top of a Furnace or Blast Furnace. This will cover the furnace and a large section will project out from one side. On that side, leave an air block, then place the Flywheel (third block from the furnace). "
-			]
-			dependencies: ["0000000000000CBD"]
-			id: "0000000000000CC6"
-			tasks: [
-				{
-					id: "0000000000000CC7"
-					type: "item"
-					item: "create:furnace_engine"
-				}
-				{
-					id: "0000000000000CC8"
-					type: "item"
-					item: "create:flywheel"
-				}
-			]
-			rewards: [
-				{
-					id: "0000000000000D76"
-					type: "command"
-					title: "Legendary Create Loot Box"
-					icon: "kubejs:legendary_lootbox"
-					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_create_loot_legendary"
-					player_command: false
-				}
-				{
-					id: "0000000000000D8A"
-					type: "item"
-					title: "Blast Furnace"
-					item: "minecraft:blast_furnace"
-				}
-			]
-		}
-		{
 			title: "Shaft"
 			x: 1.5d
 			y: 2.0d
@@ -949,7 +906,7 @@
 		}
 		{
 			x: -2.0d
-			y: 3.0d
+			y: 3.5d
 			subtitle: "Archimedean Screw"
 			description: [
 				"Just as moving items isn’t free, so to does it require some rotational force to pump and work with fluids."
@@ -977,7 +934,7 @@
 		{
 			title: "Fluid Pipes"
 			x: -1.0d
-			y: 3.0d
+			y: 3.5d
 			subtitle: "Clear the Channel"
 			description: ["Pipes are the primary means of conveying fluids. Fluid goes in, fluid goes out. Simple!"]
 			dependencies: ["0000000000000CD6"]
@@ -1000,7 +957,7 @@
 		{
 			icon: "create:fluid_valve"
 			x: -2.5d
-			y: 4.0d
+			y: 4.5d
 			subtitle: "Shut The Front Door"
 			description: ["Fluid valves may be opened and closed by applying some rotational force, for example with a Valve Handle. "]
 			dependencies: ["0000000000000D0F"]
@@ -1028,7 +985,7 @@
 		}
 		{
 			x: -3.0d
-			y: 5.0d
+			y: 5.5d
 			subtitle: "Reverse Osmosis Filter"
 			description: ["Doing the impossible is just another Tuesday in modded. Smart Fluid Pipes act as a fluid filter, either controlling what is allowed to be pulled from a connected tank, or what is allowed to continue down the line. "]
 			dependencies: ["0000000000000D0F"]
@@ -1050,7 +1007,7 @@
 		{
 			title: "Fluid Tanks"
 			x: -3.0d
-			y: 3.0d
+			y: 3.5d
 			subtitle: "Unfathomably Deep"
 			description: [
 				"Fluid Tanks are a thematic multi-block tank for all your fluid storing needs. "
@@ -1140,7 +1097,7 @@
 		}
 		{
 			x: -1.5d
-			y: 4.0d
+			y: 4.5d
 			subtitle: "Spouting Off Nonsense"
 			description: ["The spout is paired with a Depot by placing it above the Depot. It will attempt to fill any item appearing on the Depot. For example, to make buckets of water, fill potion bottles, or make delicious tea!"]
 			dependencies: ["0000000000000D11"]
@@ -1582,7 +1539,7 @@
 		}
 		{
 			x: -2.0d
-			y: 5.0d
+			y: 5.5d
 			subtitle: "Well, There's an Upside and a Downside"
 			description: [
 				"With a Hose Pulley, fluids may be pumped into or out of the world. Create massive lakes or drain them dry to let your factory grow!"
@@ -1777,6 +1734,39 @@
 				item: "minecraft:gunpowder"
 				count: 16
 			}]
+		}
+		{
+			x: -3.5d
+			y: 4.5d
+			subtitle: "No Valves required!"
+			description: [
+				"High RPM contraptions are now accomplished with the new steam engines in Create 0.5"
+				"To begin, you'll need a fluid tank of at least 2x2 size. You can then attach your steam engine(s) to any side of the tank, and place a shaft perpendicular in-front of them. Using a heat source such as a campfire or a blaze burner, the engine will begin to work and start generating RPM."
+				"Be sure to feed more water into the tank while the engine is in use!"
+			]
+			dependencies: ["0000000000000D17"]
+			dependency_requirement: "all_started"
+			id: "64D2DAE4AA7ED86A"
+			tasks: [{
+				id: "0B2E856726425548"
+				type: "item"
+				item: "create:steam_engine"
+			}]
+			rewards: [
+				{
+					id: "42CC8DA34BC850D5"
+					type: "command"
+					title: "Epic Create Loot Box"
+					icon: "kubejs:epic_lootbox"
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_create_loot_epic"
+					player_command: false
+				}
+				{
+					id: "30980573496764C6"
+					type: "item"
+					item: "create:shaft"
+				}
+			]
 		}
 	]
 }
