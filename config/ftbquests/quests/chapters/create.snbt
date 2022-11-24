@@ -1768,5 +1768,166 @@
 				}
 			]
 		}
+		{
+			x: 10.0d
+			y: -0.5d
+			description: [
+				"With the introduction of trains comes their respective tracks. You'll need these to route trains between their stations."
+				"Bulk-building tracks is fairly straightforward, by right-clicking a track with one in-hand, you'll begin the process of doing so, and simply need to right-click at another location in order to place all of the track needed to connect the two pieces. Holding blocks in your off-hand allows you to automatically build support, should your track need it."
+				"Tracks can also be linked through nether portals, allowing for interdimensional travel."
+			]
+			dependencies: ["0000000000000C40"]
+			id: "14EE6F33FC561EF6"
+			tasks: [{
+				id: "5E31BE2F6FECE061"
+				type: "item"
+				item: "create:track"
+			}]
+			rewards: [{
+				id: "6EEA7F57572F3991"
+				type: "command"
+				title: "Rare Create Loot Box"
+				icon: "kubejs:rare_lootbox"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_create_loot_rare"
+				player_command: false
+			}]
+		}
+		{
+			x: 12.5d
+			y: 2.0d
+			description: [
+				"Train casings will serve as the base of all of your train contraptions, hence the name."
+				""
+				"You'll need a train and track before you can start, and you'll need super glue to expand off of it."
+			]
+			dependencies: ["0000000000000D33"]
+			id: "41769C9AB4AE28A6"
+			tasks: [{
+				id: "3519F0AAD209FC27"
+				type: "item"
+				item: "create:railway_casing"
+			}]
+			rewards: [{
+				id: "4AF9F0E938C316B3"
+				type: "command"
+				title: "Epic Create Loot Box"
+				icon: "kubejs:epic_lootbox"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_create_loot_epic"
+				player_command: false
+			}]
+		}
+		{
+			x: 12.5d
+			y: -0.5d
+			subtitle: "From Point A to Point B"
+			description: [
+				"Stations serve multiple, important purposes for your new train contraptions."
+				""
+				"Firstly, they allow you to begin the construction of your trains. Once placed near some track, open the UI and switch to assembly mode. From there, a portion of the track will be colored blue, and by building train casing on them, you'll create a new bogey."
+				""
+				"Selecting the same track again with a bogey built atop of it will switch between the available designs. Use super glue to expand the design out (remember your off-hand!). The station will connect all bogeys together once you finish the assembly process."
+				""
+				"They also act as waypoints for your trains to traverse through; however, you'll need to set up a schedule and get a conductor before you can take full advantage of that."
+			]
+			dependencies: [
+				"14EE6F33FC561EF6"
+				"41769C9AB4AE28A6"
+			]
+			id: "3EA02640C10B7392"
+			tasks: [{
+				id: "0492005406075A5D"
+				type: "item"
+				item: "create:track_station"
+			}]
+			rewards: [{
+				id: "46CAEE97C06742C3"
+				type: "command"
+				title: "Epic Create Loot Box"
+				icon: "kubejs:epic_lootbox"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_create_loot_epic"
+				player_command: false
+			}]
+		}
+		{
+			x: 14.0d
+			y: -0.5d
+			subtitle: "From Point A to Point B (and back)"
+			description: [
+				"Train schedules, along with a (typically) willing conductor, allow your trains to traverse automatically between stations."
+			]
+			dependencies: ["3EA02640C10B7392"]
+			id: "5B06DD6572C67334"
+			tasks: [
+				{
+					id: "247946FCF4773755"
+					type: "item"
+					item: "create:schedule"
+				}
+				{
+					id: "020C1AA8FC20C3D7"
+					type: "item"
+					item: "create:controls"
+				}
+			]
+			rewards: [{
+				id: "62E088640B0C6E5A"
+				type: "command"
+				title: "Legendary Create Loot Box"
+				icon: "kubejs:legendary_lootbox"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_create_loot_legendary"
+				player_command: false
+			}]
+		}
+		{
+			x: 14.5d
+			y: -1.5d
+			subtitle: "Red Light... Green Light!"
+			description: [
+				"Train signals allow for better traversion of your tracks by blocking them out into sections, and enforcing certain directions of travel."
+				""
+				"A simple signal layout would consist of a few signals spread throughout a track route, all facing the same direction. This will prevent trains from getting too close to one another."
+				""
+				"With the use of the Wrench, you can change signals to not only check a section of track between them and the next signal, but also the state of that next signal. These are useful in preventing unwanted blockages, such as for crossing tracks."
+				""
+				"You can use nixie tubes to display the state of a signal more prominently, and use redstone to either force or read the state of a signal."
+			]
+			dependencies: ["3EA02640C10B7392"]
+			id: "7F583E0630828592"
+			tasks: [{
+				id: "1B6FB3CEC8D261DE"
+				type: "item"
+				item: "create:track_signal"
+			}]
+			rewards: [{
+				id: "051DCA772A3A004B"
+				type: "command"
+				title: "Epic Create Loot Box"
+				icon: "kubejs:epic_lootbox"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_create_loot_epic"
+				player_command: false
+			}]
+		}
+		{
+			x: 14.5d
+			y: 0.5d
+			description: [
+				"Train Observers allow checking on your passing trains."
+			]
+			dependencies: ["3EA02640C10B7392"]
+			id: "45EAFFD86EF6515A"
+			tasks: [{
+				id: "7A3854984126E2BB"
+				type: "item"
+				item: "create:track_observer"
+			}]
+			rewards: [{
+				id: "56FC6D386EA500C1"
+				type: "command"
+				title: "Epic Create Loot Box"
+				icon: "kubejs:epic_lootbox"
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_create_loot_epic"
+				player_command: false
+			}]
+		}
 	]
 }
