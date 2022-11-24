@@ -1741,11 +1741,10 @@
 			subtitle: "No Valves required!"
 			description: [
 				"High RPM contraptions are now accomplished with the new steam engines in Create 0.5"
-				"To begin, you'll need a fluid tank of at least 2x2 size. You can then attach your steam engine(s) to any side of the tank, and place a shaft perpendicular in-front of them. Using a heat source such as a campfire or a blaze burner, the engine will begin to work and start generating RPM."
-				"Be sure to feed more water into the tank while the engine is in use!"
+				"To begin, you'll need a fluid tank of at least 2x2 size. You can then attach your steam engine(s) to any side of the tank, and place a shaft perpendicular in-front of them. Then, by placing a heat source such as a campfire or a blaze burner under the tank, the engine will begin to work, generating SU."
+				"Be sure to feed water into the tank while the engine is in use!"
 			]
 			dependencies: ["0000000000000D17"]
-			dependency_requirement: "all_started"
 			id: "64D2DAE4AA7ED86A"
 			tasks: [{
 				id: "0B2E856726425548"
@@ -1754,17 +1753,17 @@
 			}]
 			rewards: [
 				{
+					id: "30980573496764C6"
+					type: "item"
+					item: "create:shaft"
+				}
+				{
 					id: "42CC8DA34BC850D5"
 					type: "command"
 					title: "Epic Create Loot Box"
 					icon: "kubejs:epic_lootbox"
 					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:loot_boxes/quest_create_loot_epic"
 					player_command: false
-				}
-				{
-					id: "30980573496764C6"
-					type: "item"
-					item: "create:shaft"
 				}
 			]
 		}
